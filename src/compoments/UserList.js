@@ -1,16 +1,13 @@
-import React, { Component } from 'react';
-import TaskItem from './TaskItem';
-import { connect } from 'react-redux';
-import * as actions from './../actions/index';
 
-class TaskList extends Component {
+import React, { Component } from 'react'
 
+export class UserList extends Component {
     constructor(props) {
-        super(props);
+        super(props)
+    
         this.state = {
-            filterName : '',
-            filterStatus : -1
-        };
+             users: users
+        }
     }
 
     onChange = (event) => {
@@ -107,8 +104,8 @@ class TaskList extends Component {
                                         value={ this.state.filterStatus }
                                     >
                                         <option value={-1}>Tất Cả</option>
-                                        <option value={0}>Ẩn</option>
-                                        <option value={1}>Kích Hoạt</option>
+                                        <option value="active">Active</option>
+                                        <option value="blocked">Blocked</option>
                                     </select>
                                 </td>
                                 <td></td>
@@ -119,24 +116,8 @@ class TaskList extends Component {
                 </div>
             </div>
         );
+
     }
 }
 
-const mapStateToProps = state => {
-    return {
-        tasks : state.tasks,
-        filterTable : state.filterTable,
-        keyword : state.search,
-        sort : state.sort
-    }
-};
-
-const mapDispatchToProps = (dispatch, props) => {
-    return {
-        onFilterTable : (filter) => {
-            dispatch(actions.filterTask(filter));
-        }
-    };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(TaskList);
+export default UserList

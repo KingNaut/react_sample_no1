@@ -1,13 +1,11 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import * as actions from './../actions/index';
+import React, { Component } from 'react'
 
-class TaskSearchControl extends Component {
-
+export class UserSearchControl extends Component {
     constructor(props) {
-        super(props);
+        super(props)
+    
         this.state = {
-            keyword : ''
+             users :users
         }
     }
 
@@ -20,7 +18,7 @@ class TaskSearchControl extends Component {
     onSearch = () => {
         this.props.onSearch(this.state.keyword); // dispatch searchTask
     }
-
+    
     render() {
         return (
             <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
@@ -44,16 +42,4 @@ class TaskSearchControl extends Component {
     }
 }
 
-const mapStateToProps = state => {
-    return {};
-};
-
-const mapDispatchToProps = (dispatch, props) => {
-    return {
-        onSearch : (keyword) => {
-            dispatch(actions.searchTask(keyword));
-        }
-    };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(TaskSearchControl);
+export default UserSearchControl

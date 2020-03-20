@@ -1,69 +1,14 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import * as actions from './../actions/index';
+import React, { Component } from 'react'
 
-class TaskForm extends Component {
-
+export class UserForm extends Component {
     constructor(props) {
-        super(props);
+        super(props)
+    
         this.state = {
-            id : '',
-            name : '',
-            status : false
-        };
-    }
-
-    componentWillMount() {
-        if(this.props.itemEditing && this.props.itemEditing.id !== null){
-            this.setState({
-                id : this.props.itemEditing.id,
-                name : this.props.itemEditing.name,
-                status : this.props.itemEditing.status
-            });
-        }else{
-            this.onClear();
+             users : users
         }
     }
-
-    componentWillReceiveProps(nextProps) {
-        if(nextProps && nextProps.itemEditing){
-            this.setState({
-                id : nextProps.itemEditing.id,
-                name : nextProps.itemEditing.name,
-                status : nextProps.itemEditing.status
-            });
-        }else{
-            this.onClear();
-        }
-    }
-
-    onHandleChange = (event) => {
-        var target = event.target;
-        var name = target.name;
-        var value = target.type === 'checkbox' ? target.checked : target.value;
-        this.setState({
-            [name] : value
-        });
-    }
-
-    onSave = (event) => {
-        event.preventDefault();
-        this.props.onSaveTask(this.state);
-        this.onClear();
-        this.onExitForm();
-    }
-
-    onClear = () => {
-        this.setState({
-            name : '',
-            status : false
-        });
-    }
-
-    onExitForm = () => {
-        this.props.onCloseForm();
-    }
-
+    
     render() {
         if(!this.props.isDisplayForm) return null;
         return (
@@ -114,22 +59,4 @@ class TaskForm extends Component {
     }
 }
 
-const mapStateToProps = state => {
-    return {
-        isDisplayForm : state.isDisplayForm,
-        itemEditing : state.itemEditing
-    }
-};
-
-const mapDispatchToProps = (dispatch, props) => {
-    return {
-        onSaveTask : (task) => {
-            dispatch(actions.saveTask(task));
-        },
-        onCloseForm : () => {
-            dispatch(actions.closeForm());
-        }
-    }
-}
-
-export default connect(mapStateToProps,mapDispatchToProps)(TaskForm);
+export default UserForm

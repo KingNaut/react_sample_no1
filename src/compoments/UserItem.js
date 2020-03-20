@@ -1,9 +1,14 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import * as actions from './../actions/index';
+import React, { Component } from 'react'
 
-class TaskItem extends Component {
-
+export class UserItem extends Component {
+    constructor(props) {
+        super(props)
+    
+        this.state = {
+             users: users
+        }
+    }
+    
     showStatusElement(){
         return (
             <span
@@ -54,28 +59,4 @@ class TaskItem extends Component {
     }
 }
 
-const mapStateToProps = state => {
-    return {};
-};
-
-const mapDispatchToProps = (dispatch, props) => {
-    return {
-        onUpdateStatus : (id) => {
-            dispatch(actions.updateStatus(id));
-        },
-        onDeleteTask : (id) => {
-            dispatch(actions.deleteTask(id))
-        },
-        onCloseForm : () => {
-            dispatch(actions.closeForm());
-        },
-        onOpenForm : () => {
-            dispatch(actions.openForm());
-        },
-        onEditTask : (task) => {
-            dispatch(actions.editTask(task));
-        }
-    };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(TaskItem);
+export default UserItem

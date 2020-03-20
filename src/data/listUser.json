@@ -1,0 +1,43 @@
+[
+    {
+        "id" : "10000000",
+        "name" : "Nguyễn Mạnh Tuấn",
+        "email" : "tuannm1@appota.com",
+        "age" : "23",
+        "created_at" : "00:00:00 20-03-2020",
+        "upadated_at" : "00:00:00 20-03-2020"
+
+    }, {
+        "id" : "10000001",
+        "name" : "Nguyễn Tuấn Kiệt",
+        "email" : "tuannm2@appota.com",
+        "age" : "23",
+        "created_at" : "00:00:00 20-03-2020",
+        "upadated_at" : "00:00:00 20-03-2020"
+
+    }, {
+        "id" : "10000002",
+        "name" : "Nguyễn Khánh Huyền",
+        "email" : "tuannm3@appota.com",
+        "age" : "23",
+        "created_at" : "00:00:00 20-03-2020",
+        "upadated_at" : "00:00:00 20-03-2020"
+
+    }, {
+        "id" : "10000003",
+        "name" : "Nguyễn Vân Anh",
+        "email" : "tuannm4@appota.com",
+        "age" : "23",
+        "created_at" : "00:00:00 20-03-2020",
+        "upadated_at" : "00:00:00 20-03-2020"
+
+    },  {
+        "id" : "10000004",
+        "name" : "Nguyễn Mạnh ",
+        "email" : "tuannm5@appota.com",
+        "age" : "23",
+        "created_at" : "00:00:00 20-03-2020",
+        "upadated_at" : "00:00:00 20-03-2020"
+
+    }
+]
