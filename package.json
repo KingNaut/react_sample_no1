@@ -1,0 +1,32 @@
+{
+  "name": "todo-list-v2",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "lodash": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-redux": "latest",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "latest",
+    "redux": "latest"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KingNaut/react_sample_no1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KingNaut/react_sample_no1/issues"
+  },
+  "homepage": "https://github.com/KingNaut/react_sample_no1#readme"
+}
